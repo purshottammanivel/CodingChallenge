@@ -24,7 +24,10 @@ public class SmartElevatorSystem {
                 int timeToReach = Math.abs(elevators[i] - request);
 
                 // Choose the elevator with minimum time, and in case of tie, choose the lower index
-                if (timeToReach < minTime || (timeToReach == minTime && bestElevator == -1) || (timeToReach == minTime && i < bestElevator)) {
+                if (timeToReach < minTime ||
+                        (timeToReach == minTime && bestElevator == -1) ||
+                        (timeToReach == minTime && i < bestElevator)
+                ) {
                     bestElevator = i;
                     minTime = timeToReach;
                 }
